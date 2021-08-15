@@ -1,0 +1,57 @@
+:root {
+  // fonts
+  --main-font: 'Poppins';
+  --font-title: 'Archivo';
+
+  // colors
+  --color-orange: #FBB03B;
+  --color-orange-light: #FFF3DF;
+  --color-text: #868686;
+  --color-white: #FFFFFF;
+  --color-gray: #706c61;
+  --color-red: #FF0000;
+
+  --color-brown-light: #E4D1C3;
+  --color-black: #090701;
+  --color-dark-grey: #3B3B3B;
+  --color-dark-yellow: #786E40;
+  --color-pale-yellow: #FFFEF2;
+}
+
+@mixin inputPlaceholder() {
+  $selector: '';
+  $prefixes: (
+      moz: "::-moz",
+      webkit: "::-webkit",
+      ie: ":-ms"
+  );
+  @each $prop, $value in $prefixes {
+      @if $prop != "moz" {
+          $selector: #{$value}-input-placeholder;
+      } @else {
+          $selector: #{$value}-placeholder;
+      }
+      @if & {
+          &#{$selector} {
+              @content;
+          }
+      } @else {
+          #{$selector} {
+              @content;
+          }
+      }
+  }
+  &::placeholder {
+    @content;
+  }
+}
+
+
+@keyframes skeleton {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}

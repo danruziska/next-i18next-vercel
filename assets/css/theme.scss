@@ -1,0 +1,23 @@
+.colors {
+  --color-brown-light: #E4D1C3;
+  --color-black: #090701;
+  --color-dark-grey: #3B3B3B;
+  --color-dark-yellow: #786E40;
+  --color-pale-yellow: #FFFEF2;
+  --color-orange: #FBB03B;
+  --color-white: #FFFFFF;
+}
+
+.entities {
+  --primary-background-color: var(--color-brown-light);
+  --primary-title-forecolor: var(--color-black);
+  --primary-subtitle-forecolor: var(--color-dark-grey);
+  --primary-button-background-color: var(--color-dark-yellow);
+  --primary-button-forecolor: var(--color-pale-yellow);
+  --secondary-button-background-color: var(--color-white);
+  --secondary-button-forecolor: var(--color-dark-yellow);
+  --primary-call-to-action-button-background-color: var(--color-orange);
+  --primary-call-to-action-button-forecolor: var(--color-black);
+  --primary-icon-background-color: var(--color-dark-yellow);
+}
+
